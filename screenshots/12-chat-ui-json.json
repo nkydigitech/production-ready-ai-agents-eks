@@ -1,0 +1,11 @@
+{
+  "agent": "AnyCompany Customer Agent",
+  "status": "Running locally - $0.00 cost",
+  "mode": "Broke mode - mock LLM, no Bedrock",
+  "tools": [
+    "get_order_history",
+    "check_product",
+    "return_item"
+  ],
+  "message": "Hello! I'm AnyCompany Shop assistant. How can I help? (This is Lab 200 - no EKS needed)"
+}
