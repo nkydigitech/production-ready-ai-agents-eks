@@ -1,0 +1,1 @@
+EKS REAL TEST - 02:05:57 Ready - ip-192-168-52-63 Ready - ContainerCreating on AWS - Deleted at 02:06:03 = 6s = /bin/bash.02
