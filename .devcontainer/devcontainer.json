@@ -1,0 +1,12 @@
+{
+  "name": "EKS AnyCompany - Zero Cost",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {"version": "latest"}
+  },
+  "forwardPorts": [8080, 8000, 3000],
+  "postCreateCommand": "bash .devcontainer/setup.sh && minikube start --driver=docker --memory=2048 --cpus=2 || true",
+  "remoteEnv": {"AWS_REGION": "us-east-1"}
+}
