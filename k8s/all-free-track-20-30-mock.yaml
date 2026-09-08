@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: anycompany
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-agent
+  namespace: anycompany
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customer-agent
+  template:
+    metadata:
+      labels:
+        app: customer-agent
+    spec:
+      containers:
+            - name: agent
+        image: nginx:alpine
+        ports:
+                - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-agent
+  namespace: anycompany
+spec:
+  selector:
+    app: customer-agent
+  ports:
+    - port: 80
+    targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-agent
+  namespace: anycompany
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rag-agent
+  template:
+    metadata:
+      labels:
+        app: rag-agent
+    spec:
+      containers:
+            - name: agent
+        image: nginx:alpine
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rag-agent
+  namespace: anycompany
+spec:
+  selector:
+    app: rag-agent
+  ports:
+    - port: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memory-agent
+  namespace: anycompany
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: memory-agent
+  template:
+    metadata:
+      labels:
+        app: memory-agent
+    spec:
+      containers:
+            - name: agent
+        image: nginx:alpine
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcp-server
+  namespace: anycompany
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcp-server
+  template:
+    metadata:
+      labels:
+        app: mcp-server
+    spec:
+      containers:
+            - name: agent
+        image: nginx:alpine
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supervisor-agent
+  namespace: anycompany
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supervisor-agent
+  template:
+    metadata:
+      labels:
+        app: supervisor-agent
+    spec:
+      containers:
+            - name: agent
+        image: nginx:alpine

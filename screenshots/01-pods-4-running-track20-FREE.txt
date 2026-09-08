@@ -1,0 +1,5 @@
+NAME                              READY   STATUS    RESTARTS   AGE
+customer-agent-5d8b6bd4b8-zr67j   1/1     Running   0          18m
+mcp-server-5756c86f64-4gvd9       1/1     Running   0          12m
+memory-agent-868b556789-cjdxh     1/1     Running   0          12m
+rag-agent-689d4c896b-vdwzd        1/1     Running   0          12m

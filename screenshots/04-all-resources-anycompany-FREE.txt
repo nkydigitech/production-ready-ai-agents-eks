@@ -1,0 +1,18 @@
+NAME                                  READY   STATUS    RESTARTS   AGE
+pod/customer-agent-5d8b6bd4b8-zr67j   1/1     Running   0          18m
+pod/mcp-server-5756c86f64-4gvd9       1/1     Running   0          12m
+pod/memory-agent-868b556789-cjdxh     1/1     Running   0          12m
+pod/rag-agent-689d4c896b-vdwzd        1/1     Running   0          12m
+
+NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/customer-agent   1/1     1            1           32m
+deployment.apps/mcp-server       1/1     1            1           12m
+deployment.apps/memory-agent     1/1     1            1           12m
+deployment.apps/rag-agent        1/1     1            1           12m
+
+NAME                                        DESIRED   CURRENT   READY   AGE
+replicaset.apps/customer-agent-5d8b6bd4b8   1         1         1       18m
+replicaset.apps/customer-agent-6846fc7687   0         0         0       32m
+replicaset.apps/mcp-server-5756c86f64       1         1         1       12m
+replicaset.apps/memory-agent-868b556789     1         1         1       12m
+replicaset.apps/rag-agent-689d4c896b        1         1         1       12m
