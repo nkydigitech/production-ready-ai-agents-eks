@@ -1,6 +1,6 @@
 # Production-Ready AI Agents on EKS
 
-**Cloud & DevOps Engineer | I turn manual, 3 AM-breaking deployments into 1-min automated pipelines with AWS + Ansible + Terraform | Featured: 15-Module Ansible Lab with real terminal**
+**Cloud & DevOps Engineer | I turn 3 AM-breaking deployments into 1-min pipelines with AWS + Ansible + Terraform | Building security-first AI agents on Amazon Bedrock AgentCore | AI Governance on AWS certified**
 
 Multi-agent AI system on Kubernetes — 7 agents (customer, supervisor, RAG, memory, knowledge-graph, MCP, strands) deployed to both minikube and a real AWS EKS cluster, with a cost-guard discipline that kept the entire project at **$0.55 of a $1.00 budget**.
 
